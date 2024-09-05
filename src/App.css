@@ -1,0 +1,214 @@
+/* Reset margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Styling */
+nav.navbar {
+  display: flex;
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: #ff0000; /* Red color */
+  color: white;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+}
+
+/* Navbar Title */
+nav h1 {
+  margin: 0;
+}
+
+/* List Item Styling */
+.listitem {
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.listitem li {
+  margin-left: 15px;
+}
+
+/* Link Item Styling */
+.navitems {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: rgb(21, 18, 18);
+  transition: background-color 0.3s ease;
+}
+
+.navitems:hover {
+  background-color: blue;
+}
+
+/* Container Styling */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Table Styling */
+.table {
+  border: 2px solid black; 
+  border-collapse: collapse;
+  margin: 20px 0;
+  width: 100%;
+  background-color: lightgray; /* Background color of table */
+  overflow-x: auto; /* Enable horizontal scroll */
+}
+
+.table th, .table td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.table th {
+  background-color: #ff0000; /* Red color */
+  color: white;
+}
+
+.table td {
+  text-align: center;
+}
+
+/* Links inside the table */
+.table a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: blue;
+}
+
+.table a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons inside the table */
+.table button {
+  background-color: #ff0000;; /* Red color */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.table button:hover {
+  background-color: darkred;
+}
+
+/* Filter Button */
+.filter-button {
+  background-color: #ff0000; /* Red color */
+  color: white;
+  border: none;
+  padding: 10px 25px; /* Increased padding for better appearance */
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.filter-button:hover {
+  background-color: darkred;
+}
+
+/* Pagination Buttons (Next, Previous) */
+.pagination-button, button[type="button"], .btn {
+  background-color: #ff0000; /* Red color */
+  color: white;
+  border: none;
+  padding: 10px 25px; /* Increased padding for better appearance */
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.pagination-button:hover {
+  background-color: darkred;
+}
+.btn:hover {
+  background-color: darkred;
+}
+button[type="button"]:hover {
+  background-color: darkred;
+}
+
+/* Date Input Styling (List View) */
+input[type="date"] {
+  background-color: #f2f2f2; /* Light gray background */
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px; /* Curved edges */
+  font-size: 16px;
+  width: 180px; /* Adjust the width for consistency */
+  margin-right: 10px;
+}
+
+/* Larger Text Boxes for Create and Edit Pages (Flexible) */
+textarea, input[type="text"], input[type="number"]  {
+  padding: 12px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%; /* Consistent width */
+  max-width: 600px; /* Max width for consistency */
+  margin-bottom: 20px;
+  resize: vertical; /* Allows flexible resizing */
+  box-sizing: border-box;
+}
+
+/* Special Styling for Address and Location Fields */
+textarea[name="fromAddress"],
+textarea[name="toAddress"],
+input[name="fromLocation"],
+input[name="toLocation"] {
+  min-height: 100px; /* Minimum height for flexibility */
+  resize: vertical; /* Allow resizing */
+  overflow-y: auto; /* Scroll if the content is larger than the box */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  nav.navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .listitem {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .listitem li {
+    margin: 10px 0;
+  }
+
+  .navitems {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* Table styling for small screens */
+  .table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .pagination-button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
